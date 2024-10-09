@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button";
 // import { FlipWordsDemo } from "@/components/flipwords";
 import { GlobeDemo } from "@/components/globe";
 import { UKElectionPieChart } from "@/components/piechart";
-import { ModeToggle } from "@/components/togglebutton";
+// import { ModeToggle } from "@/components/togglebutton";
 import { CardHoverEffectDemo } from "@/components/cardhovereffect";
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[10px_1fr_10px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-end ">
-        <ModeToggle />
+        {/* <ModeToggle /> */}
         <GlobeDemo />
         <CardHoverEffectDemo />
         {/* <FlipWordsDemo /> */}

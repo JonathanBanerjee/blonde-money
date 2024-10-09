@@ -1,3 +1,4 @@
+"use client";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
@@ -9,7 +10,7 @@ export const HoverEffect = ({
 }: {
   items: {
     title: string;
-    description: string;
+    description: JSX.Element;
     link: string;
   }[];
   className?: string;
@@ -99,13 +100,13 @@ export const CardDescription = ({
   children: React.ReactNode;
 }) => {
   return (
-    <p
+    <div
       className={cn(
         "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
         className
       )}
     >
       {children}
-    </p>
+    </div>
   );
 };

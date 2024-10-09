@@ -133,7 +133,7 @@ export function UKElectionPieChart() {
         <ChartContainer
           id={id}
           config={chartConfig}
-          className="mx-auto aspect-square w-full max-w-[300px]"
+          className="mx-auto aspect-square w-full max-w-[300px] [&_.recharts-wrapper]:max-w-[20px]"
         >
           <PieChart>
             <ChartTooltip
