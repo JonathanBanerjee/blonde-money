@@ -26,10 +26,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export const description = "UK Election Results Pie Chart";
+export const description = "German Election Results Pie Chart";
 
 const electionData = [
-  { party: "Labour", seats: 412, fill: "var(--color-labour)" },
+  { party: "CDU/CSU", seats: 412, fill: "var(--color-CDU/CSU)" },
   { party: "Conservative", seats: 121, fill: "var(--color-conservative)" },
   {
     party: "Liberal Democrats",
@@ -45,8 +45,8 @@ const chartConfig = {
   seats: {
     label: "Seats",
   },
-  labour: {
-    label: "Labour",
+  CDUCSU: {
+    label: "CDU/CSU",
     color: "hsl(var(--chart-1))",
   },
   conservative: {
