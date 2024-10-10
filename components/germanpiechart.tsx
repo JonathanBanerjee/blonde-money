@@ -32,12 +32,12 @@ const electionData = [
   { party: "Labour", seats: 412, fill: "var(--color-labour)" },
   { party: "Conservative", seats: 121, fill: "var(--color-conservative)" },
   {
-    party: "LiberalDemocrats",
+    party: "Liberal Democrats",
     seats: 72,
     fill: "var(--color-liberaldemocrats)",
   },
   { party: "SNP", seats: 9, fill: "var(--color-snp)" },
-  { party: "SinnFéin", seats: 7, fill: "var(--color-sinnféin)" },
+  { party: "Sinn Féin", seats: 7, fill: "var(--color-sinnfein)" },
   { party: "Other", seats: 29, fill: "var(--color-other)" },
 ];
 
@@ -61,7 +61,7 @@ const chartConfig = {
     label: "SNP",
     color: "hsl(var(--chart-4))",
   },
-  sinnféin: {
+  sinnfein: {
     label: "Sinn Féin",
     color: "hsl(var(--chart-5))",
   },
@@ -71,7 +71,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function UKElectionPieChart() {
+export function GermanElectionPieChart() {
   const id = "pie-uk-election";
   const [activeParty, setActiveParty] = React.useState(electionData[0].party);
 
