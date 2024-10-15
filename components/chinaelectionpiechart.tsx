@@ -61,25 +61,29 @@ const chartConfig = {
     label: "RCCK",
     color: "var(--chart-25)",
   },
+  js: {
+    label: "Jiusan Society",
+    color: "var(--chart-26)",
+  },
   cpwdp: {
     label: "cpwdp",
-    color: "var(--chart-26)",
+    color: "var(--chart-27)",
   },
   cndca: {
     label: "cndca",
-    color: "var(--chart-27)",
+    color: "var(--chart-28)",
   },
   tdsl: {
     label: "tdsl",
-    color: "var(--chart-28)",
+    color: "var(--chart-29)",
   },
   czgp: {
     label: "czgp",
-    color: "var(--chart-29)",
+    color: "var(--chart-30)",
   },
   independents: {
     label: "independents",
-    color: "var(--chart-30)",
+    color: "var(--chart-31)",
   },
 } satisfies ChartConfig;
 
