@@ -3,7 +3,7 @@ import { HoverEffect } from "./ui/card-hover-effect";
 import { UKElectionPieChart } from "./piechart";
 import { GermanElectionPieChart } from "./germanpiechart";
 import { USElectionPieChart } from "./uselectionpiechart";
-
+import { FrenchElectionPieChart } from "./franceelectionpiechart";
 export function CardHoverEffectDemo() {
   return (
     <div className="max-w-5xl mx-auto px-8">
@@ -28,9 +28,9 @@ export const projects = [
     link: "https://en.wikipedia.org/wiki/Results_of_the_2021_German_federal_election",
   },
   {
-    title: "Meta",
-    description: <UKElectionPieChart />,
-    link: "https://meta.com",
+    title: "French Presidential Election",
+    description: <FrenchElectionPieChart />,
+    link: "https://en.wikipedia.org/wiki/2022_French_presidential_election",
   },
   {
     title: "Amazon",

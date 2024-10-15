@@ -83,9 +83,14 @@ body {
     --chart-12: #BE3075; /*Left*/ 
     --chart-13: #003C8F; /*SSW*/ 
 
-      /* US Presedential Election Colours*/
-      --chart-14: #0A3161; /*Democratic*/ 
-      --chart-15: #B31942; /*Republican*/ 
+    /* US Presedential Election Colours*/
+    --chart-14: #0A3161; /*Democratic*/ 
+    --chart-15: #B31942; /*Republican*/ 
+
+    /*French Presedential Election Colours*/
+    --chart-18: #FFEB00; /*LREM */
+    --chart-19: #254671; /* RN*/
+ 
    
   }
 }

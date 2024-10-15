@@ -26,28 +26,28 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export const description = "US Presidential Election Pie Chart";
+export const description = "France Presidential Election Pie Chart";
 
 const electionData = [
-  { party: "democratic", seats: 306, fill: "var(--color-democratic)" },
-  { party: "republican", seats: 232, fill: "var(--color-republican)" },
+  { party: "lrem", seats: 58.55, fill: "var(--color-lrem)" },
+  { party: "rn", seats: 41.45, fill: "var(--color-rn)" },
 ];
 
 const chartConfig = {
   seats: {
-    label: "Seats",
+    label: "%",
   },
-  democratic: {
-    label: "Biden",
-    color: "var(--chart-14)",
+  lrem: {
+    label: "Macron",
+    color: "var(--chart-18)",
   },
-  republican: {
-    label: "Trump",
-    color: "var(--chart-15)",
+  rn: {
+    label: "Le Pen",
+    color: "var(--chart-19)",
   },
 } satisfies ChartConfig;
 
-export function USElectionPieChart() {
+export function FrenchElectionPieChart() {
   const id = "pie-uk-election";
   const [activeParty, setActiveParty] = React.useState(electionData[0].party);
 
@@ -65,8 +65,8 @@ export function USElectionPieChart() {
       <ChartStyle id={id} config={chartConfig} />
       <CardHeader className="flex-row items-start space-y-0 pb-0">
         <div className="grid gap-1">
-          <CardTitle>US Presidential Election</CardTitle>
-          <CardDescription>2020</CardDescription>
+          <CardTitle>French Presidential Election</CardTitle>
+          <CardDescription>2022</CardDescription>
         </div>
         <Select value={activeParty} onValueChange={setActiveParty}>
           <SelectTrigger
@@ -159,7 +159,7 @@ export function USElectionPieChart() {
                           y={(viewBox.cy || 0) + 24}
                           className="fill-muted-foreground"
                         >
-                          Seats
+                          &#65285;
                         </tspan>
                       </text>
                     );
