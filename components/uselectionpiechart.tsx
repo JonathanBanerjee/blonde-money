@@ -26,53 +26,28 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export const description = "German Election Results Pie Chart";
+export const description = "US Presidential Election Pie Chart";
 
 const electionData = [
-  { party: "cducsu", seats: 197, fill: "var(--color-cducsu)" },
-  { party: "spd", seats: 207, fill: "var(--color-spd)" },
-  { party: "greens", seats: 118, fill: "var(--color-greens)" },
-  { party: "fdp", seats: 91, fill: "var(--color-fdp)" },
-  { party: "AfD", seats: 83, fill: "var(--color-afd)" },
-  { party: "Left", seats: 39, fill: "var(--color-left)" },
-  { party: "SSW", seats: 1, fill: "var(--color-ssw)" },
+  { party: "democratic", seats: 306, fill: "var(--color-democratic)" },
+  { party: "republican", seats: 232, fill: "var(--color-republican)" },
 ];
 
 const chartConfig = {
   seats: {
     label: "Seats",
   },
-  cducsu: {
-    label: "CDU/CSU",
-    color: "var(--chart-8)",
+  democratic: {
+    label: "Democratic",
+    color: "var(--chart-14)",
   },
-  spd: {
-    label: "SPD",
-    color: "var(--chart-7)",
-  },
-  greens: {
-    label: "Greens",
-    color: "var(--chart-9)",
-  },
-  fdp: {
-    label: "FDP",
-    color: "var(--chart-10)",
-  },
-  afd: {
-    label: "AfD",
-    color: "var(--chart-11)",
-  },
-  left: {
-    label: "Left",
-    color: "var(--chart-12)",
-  },
-  ssw: {
-    label: "ssw",
-    color: "var(--chart-13)",
+  republican: {
+    label: "Republican",
+    color: "var(--chart-15)",
   },
 } satisfies ChartConfig;
 
-export function GermanElectionPieChart() {
+export function USElectionPieChart() {
   const id = "pie-uk-election";
   const [activeParty, setActiveParty] = React.useState(electionData[0].party);
 
@@ -90,8 +65,8 @@ export function GermanElectionPieChart() {
       <ChartStyle id={id} config={chartConfig} />
       <CardHeader className="flex-row items-start space-y-0 pb-0">
         <div className="grid gap-1">
-          <CardTitle>German Election Results</CardTitle>
-          <CardDescription>2021</CardDescription>
+          <CardTitle>US Presidential Election</CardTitle>
+          <CardDescription>2020</CardDescription>
         </div>
         <Select value={activeParty} onValueChange={setActiveParty}>
           <SelectTrigger

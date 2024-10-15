@@ -1,6 +1,8 @@
 "use-client";
 import { HoverEffect } from "./ui/card-hover-effect";
 import { UKElectionPieChart } from "./piechart";
+import { GermanElectionPieChart } from "./germanpiechart";
+import { USElectionPieChart } from "./uselectionpiechart";
 
 export function CardHoverEffectDemo() {
   return (
@@ -11,19 +13,19 @@ export function CardHoverEffectDemo() {
 }
 export const projects = [
   {
-    title: "Stripe",
-    description: <UKElectionPieChart />,
-    link: "https://stripe.com",
+    title: "US Presidential Election",
+    description: <USElectionPieChart />,
+    link: "https://www.bbc.co.uk/news/election/us2020/results",
   },
   {
-    title: "Netflix",
+    title: "UK Election",
     description: <UKElectionPieChart />,
-    link: "https://netflix.com",
+    link: "https://www.bbc.co.uk/news/election/2024/uk/results",
   },
   {
-    title: "Google",
-    description: <UKElectionPieChart />,
-    link: "https://google.com",
+    title: "German Election",
+    description: <GermanElectionPieChart />,
+    link: "https://en.wikipedia.org/wiki/Results_of_the_2021_German_federal_election",
   },
   {
     title: "Meta",

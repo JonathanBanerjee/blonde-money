@@ -72,6 +72,21 @@ body {
     --chart-5: 120 100% 25%; /* Sinn Fein  */
     --chart-6:  0, 0%, 75%; /* Other */
     --radius: 0.25rem;
+
+
+    /* German Election Colours*/
+    --chart-7: #E3000F; /*SPD*/ 
+    --chart-8: #202122; /*CDU/CSU*/ 
+    --chart-9: #409A3C; /*Greens*/ 
+    --chart-10: #FFED00; /*FDP*/ 
+    --chart-11:#00A2DE; /*AfD*/ 
+    --chart-12: #BE3075; /*Left*/ 
+    --chart-13: #003C8F; /*SSW*/ 
+
+      /* US Presedential Election Colours*/
+      --chart-14: #0A3161; /*Democratic*/ 
+      --chart-15: #B31942; /*Republican*/ 
+   
   }
 }
 
