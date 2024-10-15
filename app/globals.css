@@ -91,7 +91,21 @@ body {
     --chart-18: #FFEB00; /*LREM */
     --chart-19: #254671; /* RN*/
  
+       /*Argentinian Presedential Election Colours*/
+       --chart-20: #6C4C99; /*PL */
+       --chart-21: #36B1EA; /* FR*/
    
+    /*Chinese Election Colours*/
+    --chart-22: #DD0000; /* Chinese Communist Party */
+    --chart-23: #cb7e1f;  /* Chinese Democratic League*/
+    --chart-24: #FFF500; /* Chinese Association for Promoting Democracy*/
+    --chart-25: #FF4500; /* FR*/
+    --chart-26: #36B1EA; /* FR*/
+    --chart-27: #36B1EA; /* FR*/
+    --chart-28: #36B1EA; /* FR*/
+    --chart-29: #36B1EA; /* FR*/
+    --chart-30: #36B1EA; /* FR*/
+          
   }
 }
 

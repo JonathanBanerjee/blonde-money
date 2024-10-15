@@ -4,6 +4,7 @@ import { UKElectionPieChart } from "./piechart";
 import { GermanElectionPieChart } from "./germanpiechart";
 import { USElectionPieChart } from "./uselectionpiechart";
 import { FrenchElectionPieChart } from "./franceelectionpiechart";
+import { ArgentinianElectionPieChart } from "./argentinianelectionpiechart";
 export function CardHoverEffectDemo() {
   return (
     <div className="max-w-5xl mx-auto px-8">
@@ -33,9 +34,9 @@ export const projects = [
     link: "https://en.wikipedia.org/wiki/2022_French_presidential_election",
   },
   {
-    title: "Amazon",
-    description: <UKElectionPieChart />,
-    link: "https://amazon.com",
+    title: "Argentinian Presidential Election",
+    description: <ArgentinianElectionPieChart />,
+    link: "https://en.wikipedia.org/wiki/2023_Argentine_general_election",
   },
   {
     title: "Microsoft",
