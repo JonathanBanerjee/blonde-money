@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 // import { UKElectionBarChart } from "@/components/barchart";
 // import { FlipWordsDemo } from "@/components/flipwords";
 import { GlobeDemo } from "@/components/globe";
-import { UKElectionPieChart } from "@/components/piechart";
+import { UKElectionPieChart } from "@/components/piecharts/piechart";
 // import { ModeToggle } from "@/components/togglebutton";
 import { CardHoverEffectDemo } from "@/components/cardhovereffect";
 

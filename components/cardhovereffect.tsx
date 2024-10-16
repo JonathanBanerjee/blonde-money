@@ -1,11 +1,11 @@
 "use-client";
 import { HoverEffect } from "./ui/card-hover-effect";
-import { UKElectionPieChart } from "./piechart";
-import { GermanElectionPieChart } from "./germanpiechart";
-import { USElectionPieChart } from "./uselectionpiechart";
-import { FrenchElectionPieChart } from "./franceelectionpiechart";
-import { ArgentinianElectionPieChart } from "./argentinianelectionpiechart";
-import { ChineseElectionPieChart } from "./chinaelectionpiechart";
+import { UKElectionPieChart } from "./piecharts/piechart";
+import { GermanElectionPieChart } from "./piecharts/germanpiechart";
+import { USElectionPieChart } from "./piecharts/uselectionpiechart";
+import { FrenchElectionPieChart } from "./piecharts/franceelectionpiechart";
+import { ArgentinianElectionPieChart } from "./piecharts/argentinianelectionpiechart";
+import { ChineseElectionPieChart } from "./piecharts/chinaelectionpiechart";
 export function CardHoverEffectDemo() {
   return (
     <div className="max-w-5xl mx-auto px-8">
