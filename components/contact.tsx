@@ -3,6 +3,7 @@ import React from "react";
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
 console.log(process.env.NEXT_PUBLIC_API_KEY + " hello world");
+console.log(API_KEY + "Molto Bene");
 
 export default function Contact() {
   const [result, setResult] = React.useState("");
@@ -12,6 +13,10 @@ export default function Contact() {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
+    if (!API_KEY) {
+      console.error("API_KEY is not defined!");
+      return;
+    }
     formData.append("access_key", API_KEY);
 
     const response = await fetch("https://api.web3forms.com/submit", {
