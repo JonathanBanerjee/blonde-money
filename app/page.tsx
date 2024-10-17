@@ -6,6 +6,7 @@ import { GlobeDemo } from "@/components/globe";
 import { UKElectionPieChart } from "@/components/piecharts/piechart";
 // import { ModeToggle } from "@/components/togglebutton";
 import { CardHoverEffectDemo } from "@/components/cardhovereffect";
+import Contact from "@/components/contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         {/* <ModeToggle /> */}
         <GlobeDemo />
         <CardHoverEffectDemo />
+        <Contact />
         {/* <FlipWordsDemo /> */}
         {/* <UKElectionBarChart /> */}
         {/* <UKElectionPieChart /> */}
