@@ -51,7 +51,7 @@ export default function Contact() {
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    setResult("Sending...");
+    // setResult("Sending...");
 
     const formData = new FormData();
     formData.append("name", values.name);
