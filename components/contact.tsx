@@ -3,6 +3,10 @@ import React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+// import { Toast } from "./ui/toast";
+
+import { useToast } from "@/hooks/use-toast";
+import { ToastAction } from "./ui/toast";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -27,6 +31,7 @@ const formSchema = z.object({
 
 export default function Contact() {
   const [result, setResult] = React.useState("");
+  const { toast } = useToast();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -61,7 +66,11 @@ export default function Contact() {
       const data = await response.json();
 
       if (data.success) {
-        setResult("Form Submitted Successfully");
+        // setResult("Form Submitted Successfully");
+        toast({
+          description: "Your message has been sent.",
+        });
+
         form.reset();
       } else {
         console.log("Error", data);
@@ -69,7 +78,12 @@ export default function Contact() {
       }
     } catch (error) {
       console.error("Submission failed", error);
-      setResult("There was an error submitting the form.");
+      //   setResult("There was an error submitting the form.");
+      toast({
+        title: "Uh oh! Something went wrong.",
+        description: "There was a problem with your request.",
+        action: <ToastAction altText="Try again">Try again</ToastAction>,
+      });
     }
   };
 
@@ -127,7 +141,7 @@ export default function Contact() {
             )}
           />
 
-          <Button type="submit">Submit Form</Button>
+          <Button type="submit">Send</Button>
           <span>{result}</span>
         </form>
       </Form>
