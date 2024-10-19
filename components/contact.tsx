@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
 import { ToastAction } from "./ui/toast";
-
+import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -97,7 +97,20 @@ export default function Contact() {
     <div className="mx-auto p-6 md:px-10 py-14 max-w-4xl">
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="default">Get in touch</Button>
+          <Button
+            variant="default"
+            className={cn(
+              "text-white",
+              "bg-transparent",
+              "rounded-lg",
+              "hover:bg-emerald-600",
+              "transition-colors",
+              "duration-200",
+              "p-2"
+            )}
+          >
+            Get in touch
+          </Button>
         </SheetTrigger>
 
         {/* Update the position to "bottom" */}
