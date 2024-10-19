@@ -101,9 +101,9 @@ export default function Contact() {
             variant="default"
             className={cn(
               "text-white",
-              "bg-transparent",
+              "bg-emerald-600",
               "rounded-lg",
-              "hover:bg-emerald-600",
+              "hover:bg-green-300 ",
               "transition-colors",
               "duration-200",
               "p-2"
@@ -117,9 +117,9 @@ export default function Contact() {
         <SheetContent position="bottom" size="lg">
           <SheetHeader>
             <SheetTitle>Contact Us</SheetTitle>
-            <SheetDescription>
+            {/* <SheetDescription>
               Please fill out the form below to reach us.
-            </SheetDescription>
+            </SheetDescription> */}
           </SheetHeader>
 
           {/* Form Content */}
@@ -176,9 +176,25 @@ export default function Contact() {
               />
 
               <SheetFooter>
-                <Button type="submit">Send</Button>
+                <Button
+                  type="submit"
+                  variant="default"
+                  className={cn(
+                    "bg-emerald-600",
+                    "hover:bg-green-300 ",
+                    "text-white",
+                    "rounded-lg",
+                    "transition-colors",
+                    "duration-200",
+                    "p-2"
+                  )}
+                >
+                  Send
+                </Button>
                 <SheetClose asChild>
-                  <Button variant="outline">Close</Button>
+                  <Button variant="outline" className={cn("rounded-lg", "p-2")}>
+                    Close
+                  </Button>
                 </SheetClose>
               </SheetFooter>
               <span>{result}</span>
