@@ -3,13 +3,11 @@ import React from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-// import { Toast } from "./ui/toast";
-
 import { useToast } from "@/hooks/use-toast";
 import { ToastAction } from "./ui/toast";
 
 import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 import {
   Sheet,
   SheetClose,
@@ -20,7 +18,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-
 import {
   Form,
   FormControl,
@@ -29,7 +26,6 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
@@ -78,7 +74,6 @@ export default function Contact() {
       const data = await response.json();
 
       if (data.success) {
-        // setResult("Form Submitted Successfully");
         toast({
           description: "Your message has been sent.",
         });
@@ -90,7 +85,6 @@ export default function Contact() {
       }
     } catch (error) {
       console.error("Submission failed", error);
-      //   setResult("There was an error submitting the form.");
       toast({
         title: "Uh oh! Something went wrong.",
         description: "There was a problem with your request.",
@@ -100,63 +94,85 @@ export default function Contact() {
   };
 
   return (
-    <div className="mx-auto p-6 md:px-10 py-14 max-w-4xl ">
-      <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-8 p-8 border shadow-lg rounded-lg"
-        >
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Name</FormLabel>
-                <FormControl>
-                  <Input type="text" placeholder="Your name" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+    <div className="mx-auto p-6 md:px-10 py-14 max-w-4xl">
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button variant="default">Get in touch</Button>
+        </SheetTrigger>
 
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Email</FormLabel>
-                <FormControl>
-                  <Input type="email" placeholder="Your email" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+        {/* Update the position to "bottom" */}
+        <SheetContent position="bottom" size="lg">
+          <SheetHeader>
+            <SheetTitle>Contact Us</SheetTitle>
+            <SheetDescription>
+              Please fill out the form below to reach us.
+            </SheetDescription>
+          </SheetHeader>
 
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Message</FormLabel>
-                <FormControl>
-                  <textarea
-                    placeholder="Your message"
-                    {...field}
-                    rows={5}
-                    className="w-full p-2 border rounded-md"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          {/* Form Content */}
+          <Form {...form}>
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="space-y-8 p-8 border shadow-lg rounded-lg"
+            >
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Name</FormLabel>
+                    <FormControl>
+                      <Input type="text" placeholder="Your name" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
-          <Button type="submit">Send</Button>
-          <span>{result}</span>
-        </form>
-      </Form>
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Email</FormLabel>
+                    <FormControl>
+                      <Input type="email" placeholder="Your email" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Message</FormLabel>
+                    <FormControl>
+                      <textarea
+                        placeholder="Your message"
+                        {...field}
+                        rows={5}
+                        className="w-full p-2 border rounded-md"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <SheetFooter>
+                <Button type="submit">Send</Button>
+                <SheetClose asChild>
+                  <Button variant="outline">Close</Button>
+                </SheetClose>
+              </SheetFooter>
+              <span>{result}</span>
+            </form>
+          </Form>
+        </SheetContent>
+      </Sheet>
     </div>
   );
 }
