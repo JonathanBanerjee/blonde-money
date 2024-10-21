@@ -23,7 +23,7 @@ export function GlobeDemo() {
     directionalLeftLight: "#ffffff",
     directionalTopLight: "#ffffff",
     pointLight: "#ffffff",
-    arcTime: 1000,
+    arcTime: 2000,
     arcLength: 0.9,
     rings: 1,
     maxRings: 3,
