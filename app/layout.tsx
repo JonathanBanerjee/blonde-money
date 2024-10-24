@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Display from "./display";
 import { Toaster } from "@/components/ui/toaster";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -37,8 +39,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Display />
-          {children}
+          <main>
+            <Display />
+            <SidebarProvider>
+              <AppSidebar />
+
+              <SidebarTrigger />
+
+              {children}
+            </SidebarProvider>
+          </main>
           <Toaster />
         </ThemeProvider>
       </body>
