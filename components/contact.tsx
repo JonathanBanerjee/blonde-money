@@ -94,7 +94,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="mx-auto p-6 md:px-10 py-14 max-w-4xl">
+    <div className="flex justify-center p-6 md:px-10 py-14">
       <Sheet>
         <SheetTrigger asChild>
           <Button
