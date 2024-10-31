@@ -26,7 +26,7 @@ export function AppSidebar() {
           className={cn(
             "flex items-center gap-2 p-3 rounded-full",
             "bg-emerald-600 text-white",
-            "hover:bg-blue-500 transition-colors duration-200"
+            "hover:bg-blue-600 transition-colors duration-200"
           )}
           aria-label={item.title}
         >
