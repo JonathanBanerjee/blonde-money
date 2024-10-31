@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { GlobeDemo } from "@/components/globe";
 import { CardHoverEffectDemo } from "@/components/cardhovereffect";
 import Contact from "@/components/contact";
+import { AppSidebar } from "@/components/app-sidebar";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <GlobeDemo />
       <CardHoverEffectDemo />
       <Contact />
+      <AppSidebar />
 
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
     </div>

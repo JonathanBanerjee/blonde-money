@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { AppSidebar } from "@/components/app-sidebar";
+// import { AppSidebar } from "@/components/app-sidebar";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,23 +11,31 @@ import {
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 
+import { geistSans } from "./layout";
+
 import { cn } from "@/lib/utils";
 
 export default function Display() {
   return (
     <>
-      <AppSidebar />
       <header className="flex items-center justify-between bg-black-800 p-4">
         <div className="flex items-center space-x-4">
-          <Image
+          {/* <Image
             width={200}
             height={20}
             src="/logo-main.png"
             alt="Blonde money Logo"
-          />
-          {/* <h2 className={cn("text-white", "text-lg", "font-semibold")}>
+          /> */}
+          <h2
+            className={cn(
+              "text-white",
+              "text-lg",
+              "font-semibold",
+              geistSans.className
+            )}
+          >
             Blonde Money
-          </h2> */}
+          </h2>
         </div>
 
         <NavigationMenu>
