@@ -1,16 +1,6 @@
-import { Twitter, Linkedin, KeyRound } from "lucide-react";
-import Image from "next/image";
-
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-} from "@/components/ui/sidebar";
+import { Twitter, Linkedin } from "lucide-react";
+import React from "react";
+import { cn } from "@/lib/utils";
 
 // Menu items.
 const items = [
@@ -24,46 +14,25 @@ const items = [
     url: "https://x.com/MarketBlondes",
     icon: Twitter,
   },
-  {
-    title: "Login",
-    url: "#/loginurlgoeshere",
-    icon: KeyRound,
-  },
 ];
 
 export function AppSidebar() {
   return (
-    <Sidebar>
-      <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupLabel>
-            <Image
-              width={200}
-              height={200}
-              src="/logo-main.png"
-              alt="Blonde money Logo"
-            />
-          </SidebarGroupLabel>
-
-          <SidebarGroupContent>
-            {/* <h3 className="text-2lg font-bold text-center">
-              Join in the conversation
-            </h3> */}
-            <SidebarMenu>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </a>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-      </SidebarContent>
-    </Sidebar>
+    <div className="fixed left-4 top-1/3 space-y-4 transform -translate-y-1/2">
+      {items.map((item, index) => (
+        <a
+          href={item.url}
+          key={item.title}
+          className={cn(
+            "flex items-center gap-2 p-3 rounded-full",
+            "bg-emerald-600 text-white",
+            "hover:bg-blue-500 transition-colors duration-200"
+          )}
+          aria-label={item.title}
+        >
+          <item.icon size={24} />
+        </a>
+      ))}
+    </div>
   );
 }

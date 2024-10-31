@@ -4,7 +4,11 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Display from "./display";
 import { Toaster } from "@/components/ui/toaster";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 
 const geistSans = localFont({
@@ -39,16 +43,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main>
-            <Display />
-            <SidebarProvider>
-              <AppSidebar />
+          <Display />
+          {/* <SidebarProvider> */}
+          {/* <AppSidebar /> */}
+          {/* <SidebarTrigger /> */}
+          <main>{children}</main>
+          {/* </SidebarProvider> */}
 
-              <SidebarTrigger />
-
-              {children}
-            </SidebarProvider>
-          </main>
           <Toaster />
         </ThemeProvider>
       </body>

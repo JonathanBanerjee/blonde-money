@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { AppSidebar } from "@/components/app-sidebar";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -15,11 +16,12 @@ import { cn } from "@/lib/utils";
 export default function Display() {
   return (
     <>
+      <AppSidebar />
       <header className="flex items-center justify-between bg-black-800 p-4">
         <div className="flex items-center space-x-4">
           <Image
             width={200}
-            height={200}
+            height={20}
             src="/logo-main.png"
             alt="Blonde money Logo"
           />
