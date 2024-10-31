@@ -20,13 +20,13 @@ export default function Display() {
     <>
       <header className="flex items-center justify-between bg-black-800 p-4">
         <div className="flex items-center space-x-4">
-          {/* <Image
+          <Image
             width={200}
             height={20}
             src="/logo-main.png"
             alt="Blonde money Logo"
-          /> */}
-          <h2
+          />
+          {/* <h2
             className={cn(
               "text-white",
               "text-lg",
@@ -35,7 +35,7 @@ export default function Display() {
             )}
           >
             Blonde Money
-          </h2>
+          </h2> */}
         </div>
 
         <NavigationMenu>
