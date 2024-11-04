@@ -63,7 +63,7 @@ export function ArgentinianElectionPieChart() {
   return (
     <Card data-chart={id} className="flex flex-col">
       <ChartStyle id={id} config={chartConfig} />
-      <CardHeader className="flex-row items-start space-y-0 pb-0">
+      <CardHeader className="flex-column items-start space-y-0 pb-0">
         <div className="grid gap-1">
           <CardTitle>Argentinian Presidential Election</CardTitle>
           <CardDescription>2023</CardDescription>

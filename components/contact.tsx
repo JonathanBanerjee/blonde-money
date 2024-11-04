@@ -94,7 +94,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex justify-center p-6 md:px-10 py-14">
+    <div className="flex justify-center p-6 md:px-10 py-14 ">
       <Sheet>
         <SheetTrigger asChild>
           <Button
