@@ -29,7 +29,7 @@ const items = [
 export function AppSidebar() {
   return (
     <>
-      <div className="fixed left-4 top-1/3 space-y-4 transform -translate-y-1/2">
+      <div className="hidden sm:block fixed left-4 top-1/3 space-y-4 transform -translate-y-1/2 ">
         {items.map((item, index) => (
           <a
             href={item.url}

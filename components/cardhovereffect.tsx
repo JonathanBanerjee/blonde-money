@@ -8,7 +8,7 @@ import { ArgentinianElectionPieChart } from "./piecharts/argentinianelectionpiec
 import { ChineseElectionPieChart } from "./piecharts/chinaelectionpiechart";
 export function CardHoverEffectDemo() {
   return (
-    <div className="max-w-5xl mx-auto px-8">
+    <div className="max-w-5xl mx-auto ">
       <HoverEffect items={projects} />
     </div>
   );
