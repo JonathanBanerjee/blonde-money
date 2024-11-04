@@ -114,7 +114,7 @@ export default function Contact() {
         </SheetTrigger>
 
         {/* Update the position to "bottom" */}
-        <SheetContent position="bottom" size="lg">
+        <SheetContent side="bottom">
           <SheetHeader>
             <SheetTitle>Contact Us</SheetTitle>
             {/* <SheetDescription>
