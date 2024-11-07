@@ -29,8 +29,8 @@ import {
 export const description = "US Presidential Election Pie Chart";
 
 const electionData = [
-  { party: "democratic", seats: 306, fill: "var(--color-democratic)" },
-  { party: "republican", seats: 232, fill: "var(--color-republican)" },
+  { party: "democratic", seats: 227, fill: "var(--color-democratic)" },
+  { party: "republican", seats: 311, fill: "var(--color-republican)" },
 ];
 
 const chartConfig = {
@@ -38,7 +38,7 @@ const chartConfig = {
     label: "Seats",
   },
   democratic: {
-    label: "Biden",
+    label: "Harris",
     color: "var(--chart-14)",
   },
   republican: {
@@ -66,7 +66,7 @@ export function USElectionPieChart() {
       <CardHeader className="flex-row items-start space-y-0 pb-0">
         <div className="grid gap-1">
           <CardTitle>US Presidential Election</CardTitle>
-          <CardDescription>2020</CardDescription>
+          <CardDescription>2024</CardDescription>
         </div>
         <Select value={activeParty} onValueChange={setActiveParty}>
           <SelectTrigger
