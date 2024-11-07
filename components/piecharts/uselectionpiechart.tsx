@@ -29,8 +29,8 @@ import {
 export const description = "US Presidential Election Pie Chart";
 
 const electionData = [
-  { party: "democratic", seats: 227, fill: "var(--color-democratic)" },
-  { party: "republican", seats: 311, fill: "var(--color-republican)" },
+  { party: "democratic", seats: 226, fill: "var(--color-democratic)" },
+  { party: "republican", seats: 312, fill: "var(--color-republican)" },
 ];
 
 const chartConfig = {
