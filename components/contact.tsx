@@ -117,9 +117,9 @@ export default function Contact() {
         <SheetContent side="bottom">
           <SheetHeader>
             <SheetTitle>Contact Us</SheetTitle>
-            {/* <SheetDescription>
+            <SheetDescription>
               Please fill out the form below to reach us.
-            </SheetDescription> */}
+            </SheetDescription>
           </SheetHeader>
 
           {/* Form Content */}
