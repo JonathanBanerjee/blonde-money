@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import "./styles.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Display from "./display";
 import { Toaster } from "@/components/ui/toaster";
+import HamburgerMenu from "@/components/hamburger";
 import {
   SidebarInset,
   SidebarProvider,
@@ -38,6 +40,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* <HamburgerMenu /> */}
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
