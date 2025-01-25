@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
+import { Linkedin, LucideIcon, Twitter, Link, Youtube } from "lucide-react";
 
 export const Card = React.memo(
   ({
@@ -10,38 +11,96 @@ export const Card = React.memo(
     hovered,
     setHovered,
   }: {
-    card: { title: string; src: string; description: string };
+    card: {
+      title: string;
+      src: string;
+      description: string;
+      icon: any;
+    };
     index: number;
     hovered: number | null;
     setHovered: React.Dispatch<React.SetStateAction<number | null>>;
-  }) => (
-    <div
-      onMouseEnter={() => setHovered(index)}
-      onMouseLeave={() => setHovered(null)}
-      className={cn(
-        "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
-        hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
-      )}
-    >
-      <Image
-        src={card.src}
-        alt={card.title}
-        fill
-        className="object-cover absolute inset-0"
-      />
+  }) => {
+    const renderIcon = (icon: any) => {
+      const iconStyle = {
+        backgroundColor: icon.iconColor || "#0000",
+        borderRadius: "50%",
+        padding: "10px",
+        marginLeft: "10px",
+        display: "inline-block",
+        "&  svg": { width: "20px", height: "20px" },
+      };
+
+      switch (icon.icon) {
+        case "Linkedin":
+          return (
+            <a href={icon.url} target="_blank">
+              <div style={iconStyle}>
+                <Linkedin />
+              </div>
+            </a>
+          );
+        case "Twitter":
+          return (
+            <a href={icon.url} target="_blank">
+              <div style={iconStyle}>
+                <Twitter />
+              </div>
+            </a>
+          );
+        case "Link":
+          return (
+            <a href={icon.url} target="_blank">
+              <div style={iconStyle}>
+                <Link />
+              </div>
+            </a>
+          );
+        case "Youtube":
+          return (
+            <a href={icon.url} target="_blank">
+              <div style={iconStyle}>
+                <Youtube />
+              </div>
+            </a>
+          );
+        default:
+          return null;
+      }
+    };
+
+    return (
       <div
+        onMouseEnter={() => setHovered(index)}
+        onMouseLeave={() => setHovered(null)}
         className={cn(
-          "absolute inset-0 bg-black/50 flex flex-col justify-end py-4 px-4 transition-opacity duration-300",
-          hovered === index ? "opacity-100" : "opacity-0"
+          "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
+          hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
         )}
       >
-        <div className="text-xl md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200">
-          {card.title}
+        <Image
+          src={card.src}
+          alt={card.title}
+          fill
+          className="object-cover absolute inset-0"
+        />
+        <div
+          className={cn(
+            "absolute inset-0 bg-black/50 flex flex-col justify-between py-4 px-4 transition-opacity duration-300",
+            hovered === index ? "opacity-100" : "opacity-0"
+          )}
+        >
+          <div>
+            <div className="text-xl md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200">
+              {card.title}
+            </div>
+            <div className="mt-2 text-sm text-white">{card.description}</div>
+          </div>
+          <div>{card.icon && card.icon.map((e: any) => renderIcon(e))}</div>
         </div>
-        <div className="mt-2 text-sm text-white">{card.description}</div>
       </div>
-    </div>
-  )
+    );
+  }
 );
 
 Card.displayName = "Card";
@@ -50,6 +109,7 @@ type Card = {
   title: string;
   src: string;
   description: string;
+  icon: any;
 };
 
 export function FocusCards({ cards }: { cards: Card[] }) {

@@ -1,36 +1,144 @@
 import { FocusCards } from "@/components/ui/focus-cards";
-import { description } from "./piecharts/piechart";
+import { Linkedin, Twitter, Link, Youtube } from "lucide-react";
+
+import React from "react";
 
 export function AboutUsCards() {
-  const cards = [
+  const teamCards = [
     {
       title: "Helen Thomas",
       src: "/images/HelenThomas.png",
       description: "CEO",
+      icon: [
+        {
+          icon: "Linkedin",
+          iconColor: "#0077B5",
+          url: "https://www.linkedin.com/in/h-thomas/",
+        },
+        {
+          icon: "Twitter",
+          iconColor: "#1DA1F2",
+          url: "https://www.twitter.com/blonde-money/",
+        },
+      ],
     },
     {
       title: "Richard Brownlees",
       src: "/images/richardbrownlees.jpeg",
       description: "COO",
-    },
-
-    {
-      title: "Nicola Horlick",
-      src: "/images/user.jpg",
-    },
-    {
-      title: "Camping is for pros",
-      src: "https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      title: "The road not taken",
-      src: "https://images.unsplash.com/photo-1507041957456-9c397ce39c97?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      title: "The First Rule",
-      src: "https://assets.aceternity.com/the-first-rule.png",
+      icon: [
+        {
+          icon: "Linkedin",
+          iconColor: "#0077B5",
+          url: "https://www.linkedin.com/in/richard-brownlees-38479926/",
+        },
+        {
+          icon: "Twitter",
+          iconColor: "#1DA1F2",
+          url: "https://x.com/hrhhs",
+        },
+      ],
     },
   ];
 
-  return <FocusCards cards={cards} />;
+  const boardCards = [
+    {
+      title: "Nicola Horlick",
+      src: "/images/nicolahorlick.png",
+      description: "Board Member",
+      icon: [
+        {
+          icon: "Linkedin",
+          iconColor: "#0077B5",
+          url: "https://www.linkedin.com/in/nicola-horlick-98772311/",
+        },
+        {
+          icon: "Twitter",
+          iconColor: "#1DA1F2",
+          url: "https://x.com/NicolaHorlick",
+        },
+      ],
+    },
+    {
+      title: "Lord Wood",
+      src: "/images/LordWood.jpg",
+      description: "Board Member",
+      icon: [
+        {
+          icon: "Youtube",
+          iconColor: "#FF0000",
+          url: "https://www.youtube.com/channel/UCfjAetXwtWDun9I9cTltm0A",
+        },
+        {
+          icon: "Twitter",
+          iconColor: "#1DA1F2",
+          url: "https://x.com/stewartwood?lang=en",
+        },
+      ],
+    },
+    {
+      title: "Sir Paul Tucker",
+      src: "/images/SirPaulTucker.jpg",
+      description: "Board Member",
+      icon: [
+        {
+          icon: "Link",
+          iconColor: "#0077B5",
+          url: "http://paultucker.me",
+        },
+      ],
+    },
+
+    {
+      title: "Paresh Patel",
+      src: "/images/pareshpatel.jpg",
+      description: "Board Member",
+      icon: [
+        {
+          icon: "Linkedin",
+          iconColor: "#0077B5",
+          url: "https://www.linkedin.com/in/pareshpatel-msoadvisors/",
+        },
+      ],
+    },
+    {
+      title: "Quentin Smith",
+      src: "/images/quentinsmith.jpeg",
+      description: "Board Member",
+      icon: [
+        {
+          icon: "Linkedin",
+          iconColor: "#0077B5",
+          url: "https://www.linkedin.com/in/quentin-smith-3608851aa/",
+        },
+      ],
+    },
+    {
+      title: "George Robinson",
+      src: "/images/user.jpg",
+      description: "Board Member",
+      icon: [],
+    },
+
+    {
+      title: "Campbell Clarke",
+      src: "/images/user.jpg",
+      description: "Board Member",
+      icon: [],
+    },
+  ];
+
+  return (
+    <>
+      <h2 className="text-3xl sm:text-4xl font-bold text-white m-10">
+        Our Team
+      </h2>
+
+      <FocusCards cards={teamCards} />
+      <h2 className="text-3xl sm:text-4xl font-bold text-white m-10">
+        Board Members
+      </h2>
+      <FocusCards cards={boardCards} />
+    </>
+  );
 }
