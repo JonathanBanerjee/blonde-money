@@ -66,7 +66,7 @@ export default function Display() {
 
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  href="/insights"
+                  href="https://blondemoney.co.uk/insights/"
                   className={cn(
                     "text-white",
                     "bg-transparent",
