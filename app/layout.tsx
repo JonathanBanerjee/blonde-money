@@ -25,9 +25,44 @@ export const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Blonde Money",
+  title: "Blonde Money | Global Financial & Political Intelligence",
   description:
-    "We provide actionable intelligence where the worlds of finance and politics collide",
+    "Blonde Money provides actionable intelligence and expert insights where finance and politics intersect. Get data-driven analysis on global markets, elections, and policy decisions.",
+  keywords:
+    "financial intelligence, political analysis, global markets, election analysis, financial data, political insights, market intelligence",
+  openGraph: {
+    title: "Blonde Money | Global Financial & Political Intelligence",
+    description:
+      "Expert insights where finance and politics intersect. Data-driven analysis on global markets, elections, and policy decisions.",
+    type: "website",
+    url: "https://blondemoney.co.uk",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Blonde Money",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blonde Money | Global Financial & Political Intelligence",
+    description:
+      "Expert insights where finance and politics intersect. Data-driven analysis on global markets, elections, and policy decisions.",
+    images: ["/twitter-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({

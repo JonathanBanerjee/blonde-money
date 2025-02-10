@@ -71,18 +71,18 @@ export const Card = React.memo(
 
     return (
       <div
+        className="relative aspect-[4/5] w-full rounded-xl bg-gradient-to-b from-neutral-50/90 to-neutral-50/90 dark:from-neutral-950/90 dark:to-neutral-950/90"
         onMouseEnter={() => setHovered(index)}
         onMouseLeave={() => setHovered(null)}
-        className={cn(
-          "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-60 md:h-96 w-full transition-all duration-300 ease-out",
-          hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
-        )}
+        role="article"
+        aria-label={card.title}
       >
         <Image
           src={card.src}
-          alt={card.title}
+          alt={`${card.title} - ${card.description}`}
           fill
           className="object-cover absolute inset-0"
+          loading="lazy"
         />
         <div
           className={cn(

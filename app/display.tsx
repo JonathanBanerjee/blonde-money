@@ -20,29 +20,24 @@ import { cn } from "@/lib/utils";
 
 export default function Display() {
   const isMobile = useIsMobile();
-  console.log(isMobile);
+
   return (
-    <>
-      <header className="flex items-center justify-between bg-black-800 p-4 w-full ">
-        {/* <div className="flex items-center space-x-4  justify-between w-full"> */}
+    <header
+      role="banner"
+      className="flex items-center justify-between bg-black-800 p-4 w-full"
+    >
+      <div className="flex items-center">
         <Image
           width={200}
           height={20}
           src="/logo-main.png"
-          alt="Blonde money Logo"
+          alt="Blonde Money Logo"
+          priority
         />
+      </div>
+
+      <nav role="navigation" aria-label="Main navigation">
         <HamburgerMenu />
-        {/* <h2
-            className={cn(
-              "text-white",
-              "text-lg",
-              "font-semibold",
-              geistSans.className
-            )}
-          >
-            Blonde Money
-          </h2> */}
-        {/* </div> */}
 
         {!isMobile && (
           <NavigationMenu>
@@ -100,7 +95,7 @@ export default function Display() {
             </NavigationMenuList>
           </NavigationMenu>
         )}
-      </header>
-    </>
+      </nav>
+    </header>
   );
 }
