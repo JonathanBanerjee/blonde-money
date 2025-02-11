@@ -1,8 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Blonde Money
+
+A modern web platform providing expert insights on global financial markets and political developments. View the live site at [blonde-money.vercel.app](https://blonde-money.vercel.app)
+
+## Overview
+
+Blonde Money delivers actionable intelligence at the intersection of finance and politics. The platform features:
+
+- Interactive global data visualization
+- Real-time election analysis across major economies
+- Expert financial and political insights
+- Mobile-responsive design
+
+## Key Features
+
+### Global Data Visualization
+
+- Interactive 3D globe showing real-time data flows
+- Animated data points highlighting global connections
+- Responsive design that works across all devices
+
+### Election Analysis
+
+Comprehensive election coverage and analysis for:
+
+- US Presidential Election 2024
+- UK Election 2024
+- French Presidential Election 2022
+- German Election Results 2021
+- Argentinian Presidential Election 2023
+- Chinese Election 2023
+
+### Modern Tech Stack
+
+- **Framework**: Next.js 14
+- **Styling**: Tailwind CSS
+- **3D Rendering**: Three.js
+- **Data Visualization**: Recharts
+- **UI Components**: Radix UI
+- **Animations**: Framer Motion
+- **Typography**: Geist Font Family
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -10,29 +60,55 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [https://localhost:3000](https://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+blonde-money/
+├── app/                    # Next.js app directory
+│   ├── about/             # About page
+│   ├── insights/          # Insights page
+│   └── page.tsx           # Home page
+├── components/            # React components
+│   ├── ui/               # Reusable UI components
+│   └── piecharts/        # Election visualization components
+├── public/               # Static assets
+└── styles/              # Global styles
+```
 
-## Learn More
+## Features in Detail
 
-To learn more about Next.js, take a look at the following resources:
+### Interactive Globe
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Real-time data visualization
+- Customizable data points
+- Smooth animations and transitions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Election Analysis Tools
 
-## Deploy on Vercel
+- Interactive pie charts
+- Historical data comparison
+- Real-time updates
+- Cross-country analysis
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Responsive Design
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Mobile-first approach
+- Adaptive layouts
+- Touch-friendly interactions
+- Cross-browser compatibility
 
-# blonde-money
+## Contributing
+
+We welcome contributions! Please read our contributing guidelines before submitting pull requests.
+
+## License
+
+This project is proprietary software owned by Blonde Money.
+
+## Contact
+
+For more information, visit [blonde-money.vercel.app](https://blonde-money.vercel.app) or use the contact form on our website.
