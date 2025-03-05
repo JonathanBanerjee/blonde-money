@@ -29,12 +29,12 @@ import {
 export const description = "German Election Results Pie Chart";
 
 const electionData = [
-  { party: "cducsu", seats: 197, fill: "var(--color-cducsu)" },
-  { party: "spd", seats: 207, fill: "var(--color-spd)" },
-  { party: "greens", seats: 118, fill: "var(--color-greens)" },
-  { party: "fdp", seats: 91, fill: "var(--color-fdp)" },
-  { party: "AfD", seats: 83, fill: "var(--color-afd)" },
-  { party: "Left", seats: 39, fill: "var(--color-left)" },
+  { party: "cducsu", seats: 208, fill: "var(--color-cducsu)" },
+  { party: "spd", seats: 86, fill: "var(--color-spd)" },
+  { party: "greens", seats: 85, fill: "var(--color-greens)" },
+  { party: "fdp", seats: 0, fill: "var(--color-fdp)" },
+  { party: "AfD", seats: 152, fill: "var(--color-afd)" },
+  { party: "Left", seats: 64, fill: "var(--color-left)" },
   { party: "SSW", seats: 1, fill: "var(--color-ssw)" },
 ];
 
@@ -91,7 +91,7 @@ export function GermanElectionPieChart() {
       <CardHeader className="flex-row items-start space-y-0 pb-0">
         <div className="grid gap-1">
           <CardTitle>German Election Results</CardTitle>
-          <CardDescription>2021</CardDescription>
+          <CardDescription>2025</CardDescription>
         </div>
         <Select value={activeParty} onValueChange={setActiveParty}>
           <SelectTrigger
